@@ -64,16 +64,6 @@ int main(int ac, char **av)
     }
 }
 
-// index = 1;
-// while(index > 0)
-// {
-//     s--;
-//     if(*s == ']')
-//         index++;
-//     else if(*s == '[')
-//         index--;
-// }
-
 //- '>' increment the pointer ;
 // - '<' decrement the pointer ;
 // - '+' increment the pointed byte ;
