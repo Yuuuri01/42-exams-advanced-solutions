@@ -1,5 +1,4 @@
 # include <unistd.h>
-# include <stdio.h>
 # include <stdlib.h>
 
 int ft_strlen(char *str)
@@ -118,9 +117,12 @@ char    *moment(unsigned int duration)
     time[i] = '\0';
     return time;
 }
+/*
+# include <stdio.h>
 int main()
 {
     unsigned int nb = -25920000;
     char *t = moment(nb);
     printf("%s", t);
 }
+*/
