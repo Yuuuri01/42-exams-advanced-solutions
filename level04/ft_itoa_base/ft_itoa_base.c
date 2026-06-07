@@ -43,6 +43,12 @@ char    *ft_itoa_base(int value, int base)
     s = malloc((size + 1) * sizeof(char));
     if(!s) return NULL;
 
+    if(value == 0)
+    {
+        s[0] = '0';
+        s[1] = '\0';
+        return s;
+    }
     if(value < 0 && base == 10)
     {
         s[0] = '-';
@@ -51,7 +57,7 @@ char    *ft_itoa_base(int value, int base)
     else
         nbr = value;
     s[size--] = '\0';
-    while(size >= 0)
+    while(nbr)
     {
         s[size--] = full_base[nbr % base];
         nbr /= base;
