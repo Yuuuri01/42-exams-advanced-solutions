@@ -23,7 +23,7 @@ int get_len(int nb, int base)
     }
     return size;
 }
-char	*ft_itoa_base(int value, int base)
+char    *ft_itoa_base(int value, int base)
 {
     char *s;
     int size;
@@ -51,7 +51,7 @@ char	*ft_itoa_base(int value, int base)
     else
         nbr = value;
     s[size--] = '\0';
-    while(nbr)
+    while(size >= 0)
     {
         s[size--] = full_base[nbr % base];
         nbr /= base;
