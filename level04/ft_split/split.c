@@ -66,16 +66,3 @@ char **ft_split(char *str)
     sp[j] = NULL;
     return sp;
 }
-int main()
-{
-    char *s = "\t\nhello your \n\n klo world\n\t  ";
-    char **s2 =  ft_split(s);
-    int i = 0;
-    while(s2[i])
-    {
-        printf("%s\n", s2[i]);
-        free(s2[i]);
-        i++;
-    }
-    free(s2);
-}
