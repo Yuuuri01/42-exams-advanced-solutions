@@ -8,7 +8,7 @@ int ft_strlen(char *str)
         i++;
     return i;
 }
-char *sec_or_what(int nb, int type)
+char *units(int nb, int type)
 {
     if(type == 1)
     {
@@ -94,7 +94,7 @@ char    *moment(unsigned int duration)
     
     type = 0;
     nb_time = get_time(duration, &type);
-    type_time = sec_or_what(nb_time, type);
+    type_time = units(nb_time, type);
     size_nb = get_len(nb_time);
     size_type = ft_strlen(type_time);
     time = malloc((size_nb + size_type + 1) * sizeof(char));
