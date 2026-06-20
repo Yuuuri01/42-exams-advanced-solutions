@@ -12,7 +12,7 @@ int is_close(char c)
         return 1;
     return 0;
 }
-int correct_colse(char c1, char c2)
+int close_tag(char c1, char c2)
 {
     if(c1 == '{' && c2 == '}') return 1;
     else if(c1 == '(' && c2 == ')') return 1;
@@ -46,7 +46,7 @@ int brackets(char *s, int *inter)
         else if(j >= 0 && is_close(*s))
         {
             *inter = 1;
-            if(correct_colse(arr[j], *s))
+            if(close_tag(arr[j], *s))
                 j--;
             else
                 return 0;
